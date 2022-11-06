@@ -39,21 +39,21 @@ function App() {
 
     console.log(ast)
   
-      sendMessage = (message1 => {
+      constsendMessage = (message1 => {
        /*
        * here is some big code to send a message
        */
      })
     
-      half = (number => {
+      const half = (number => {
        return number / 2;
      })
     
-      showConsole = () => {
+     const showConsole = () => {
        console.log('Expo');
      }
     
-     concatWords = (first, second => {
+    const concatWords = ((first, second) => {
        return first + second;
      })
     
