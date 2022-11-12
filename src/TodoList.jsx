@@ -12,6 +12,12 @@ function TodoList(){
         
     }
 
+    const removeTodo = id => {
+        const removeArr = [...todos].filter(todo => todo.id !== id)
+
+        setTodos(removeArr)
+    }
+
     const completeTodo = id => {
         let updataedTodos = todos.map(todo => {
             if (todo.id === id) {
@@ -23,11 +29,12 @@ function TodoList(){
     }
 
     return (
-        <div>
+        <div className="notes">
             <TodoForm onSubmit={addTodo}/>
             <Todo 
             todos ={todos}
             completeTodo={completeTodo}
+            removeTodo={removeTodo}
             />
         </div>
     )

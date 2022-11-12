@@ -2,12 +2,7 @@ import React, {useState} from "react";
 import TodoForm from "./TodoForm";
 import remove from '../src/static/img/remove.png'
 
-function Todo({todos, completeTodo}){
-    const [edit, setEdit] = useState({
-        id: null,
-        value: ''
-    })
-
+function Todo({todos, completeTodo, removeTodo}){
 
     return todos.map((todo, index) => (
     <div 
@@ -19,7 +14,10 @@ function Todo({todos, completeTodo}){
     </div>
 
     <div className="icons">
-        <remove/>
+        <img src={remove} alt="X" 
+        onClick={() => removeTodo(todo.id)}
+        className='delete'
+        />
     </div>
 
     </div>
